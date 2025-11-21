@@ -193,11 +193,3 @@ eksctl get cluster --region eu-west-2
 - kubectl command-line proficiency
 - Infrastructure as Code for Kubernetes
 
-## Next Steps
-
-After mastering EKS basics, consider:
-- Ingress controllers (NGINX, ALB Ingress)
-- Service mesh (Istio, Linkerd)
-- GitOps with ArgoCD or Flux
-- Kubernetes RBAC and security
-- Persistent storage with EBS CSI driver
