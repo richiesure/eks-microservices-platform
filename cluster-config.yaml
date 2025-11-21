@@ -1,0 +1,30 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: microservices-cluster
+  region: eu-west-2
+  version: "1.28"
+
+managedNodeGroups:
+  - name: worker-nodes
+    instanceType: t3.small
+    desiredCapacity: 2
+    minSize: 1
+    maxSize: 3
+    volumeSize: 20
+    ssh:
+      allow: false
+    labels:
+      role: worker
+    tags:
+      Environment: Development
+      ManagedBy: eksctl
+      Project: DevOps-Portfolio
+
+cloudWatch:
+  clusterLogging:
+    enableTypes:
+      - api
+      - audit
+      - authenticator

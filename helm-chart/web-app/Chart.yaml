@@ -1,0 +1,9 @@
+apiVersion: v2
+name: web-app
+description: Microservices web application Helm chart
+type: application
+version: 1.0.0
+appVersion: "2.0.0"
+maintainers:
+  - name: DevOps Engineer
+    email: richieprograms@gmail.com

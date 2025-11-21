@@ -1,0 +1,29 @@
+replicaCount: 2
+
+image:
+  repository: 494376414941.dkr.ecr.eu-west-2.amazonaws.com/devops-day3-app
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 3000
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "200m"
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilization: 70
+
+env:
+  PORT: "3000"
+  APP_VERSION: "2.0.0-helm"
