@@ -1,7 +1,6 @@
 # PROJECT 6 COMPLETION SUMMARY
 
-**Project**: Microservices Platform on Amazon EKS  
-**Date**: November 21, 2025  
+**Project**: Microservices Platform on Amazon EKS   
 **Duration**: ~45 minutes (excluding cluster creation time)
 
 ---
@@ -162,20 +161,7 @@ Application Performance:
 ✅ Load balancer integration  
 ✅ Namespace management  
 
----
 
-## Interview Talking Points
-
-**Q: Why migrate from ECS to EKS?**
-> "While ECS worked well for our initial deployment, EKS provides industry-standard Kubernetes orchestration. This offers better portability across cloud providers, access to the vast Kubernetes ecosystem including Helm charts and operators, and aligns with the skills most demanded in the job market where 80%+ of container orchestration roles require Kubernetes experience."
-
-**Q: How does auto-scaling work in Kubernetes?**
-> "I implemented a Horizontal Pod Autoscaler that monitors CPU utilization across pods. When average CPU exceeds 70%, the HPA automatically increases replica count up to our maximum of 10 pods. It scales down when utilization drops, with a cooldown period to prevent thrashing. This provides cost-efficient resource usage while maintaining performance during traffic spikes."
-
-**Q: What's the benefit of using Helm?**
-> "Helm provides templating that eliminates repetitive YAML across environments. With a single values.yaml change, I can deploy to dev, staging, or production with appropriate configurations. It also tracks releases enabling easy rollbacks, and the chart structure makes applications portable and shareable across teams."
-
----
 
 ## Repository
 
@@ -183,7 +169,7 @@ Application Performance:
 
 ---
 
-## Next Steps
+## What I did Next
 
 - [ ] Delete EKS cluster to save costs
 - [ ] Continue with Security Hardening project
